@@ -116,7 +116,7 @@ contract('DFcore', function(accounts) {
     var core;
     return DFcore.deployed().then(function(instance) {
       core = instance;
-      return core.getPJcount()
+      return core.getPJCount()
     }).then(function(result) {
       console.log(result)
     })

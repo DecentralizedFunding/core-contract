@@ -78,7 +78,7 @@ contract DFcore is Ownable {
     return (PJs[_id].funds[_address]);
   }
 
-  function getPJcount() public view returns(uint256) {
+  function getPJCount() public view returns(uint256) {
     return PJs.length;
   }
 
