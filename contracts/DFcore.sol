@@ -21,9 +21,8 @@ contract DFcore is Ownable {
     _;
   }
 
-  function makePJ(string _title, uint _goal) public {  // クラウドファンディングのETHを貯める箱を作る関数
+  function makePJ(string _title, uint _goal, uint _limittime) public {  // クラウドファンディングのETHを貯める箱を作る関数
     /* uint _limittime = now + 30 days; //とりあえずデフォルトで期限を30日と設定 */
-    uint _limittime = now + 5; // truffleでtestするために5秒に設定してある。
     address[] memory _supportersArray;
     uint id = PJs.push(PJ(_title,_goal, 0, _limittime, _supportersArray)) - 1;
     PJToOwner[id] = msg.sender;
